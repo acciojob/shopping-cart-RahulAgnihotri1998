@@ -1,2 +1,42 @@
-
+#shopping-list {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  input[type="text"] {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #eee;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #ddd;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top
+  }  
 /* Your CSS Code here. */
