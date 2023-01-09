@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>Shopping List</title>
 </head>
-
 <body>
-	<div id="shopping-list">
-		<h1>Shopping List</h1>
-		<label for="item-name-input">Item:</label>
-		<input type="text" id="item-name-input" aria-label="Enter item name">
-		<label for="item-price-input">Price:</label>
-		<input type="text" id="item-price-input" aria-label="Enter item price">
-		<button id="add" aria-label="Add item">Add</button>
-		<table>
-		  <thead>
-			<tr>
-			  <th id="item">Item</th>
-			  <th id="price">Price</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr>
-			  <td></td>
-			  <td><h3 id="total">0</h3></td>
-			</tr>
-		  </tbody>
-		</table>
-	  </div>
-	  
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <header>
+    <h1>Shopping List</h1>
+  </header>
+  <main>
+    <form>
+      <label for="item-name-input">Item Name:</label>
+      <input id="item-name-input" type="text">
+      <label for="item-price-input">Price:</label>
+      <input id="item-price-input" type="number">
+      <button id="add">Add</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th id="item">Item</th>
+          <th id="price">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grand Total</td>
+          <td id="total">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+	  <script src="script.js"></script>
 </body>
-
 </html>

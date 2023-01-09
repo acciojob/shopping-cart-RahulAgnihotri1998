@@ -1,35 +1,26 @@
-      const itemInput = document.getElementById("item-name-input");
-      const priceInput = document.getElementById("item-price-input");
-      const addButton = document.getElementById("add");
-      const shoppingList = document.getElementById("shopping-list");
-      const grandTotal = document.getElementById("grand-total");
-      const totalLabel = document.getElementById("total");
+   
+const addButton = document.getElementById('add');
+const itemNameInput = document.getElementById('item-name-input');
+const itemPriceInput = document.getElementById('item-price-input');
+const totalElement = document.getElementById('total');
 
-      addButton.addEventListener("click", () => {
-        const itemName = itemInput.value;
-        const itemPrice = priceInput.value;
+let total = 0;
 
-        if (!itemName || !itemPrice) {
-          alert("Please enter a valid item name and price.");
-          return;
-        }
+addButton.addEventListener('click', () => {
+  const itemName = itemNameInput.value;
+  const itemPrice = itemPriceInput.value;
 
-        const row = document.createElement("tr");
-        const itemColumn = document.createElement("td");
-        const priceColumn = document.createElement("td");
+  // Add a new row to the table with the item name and price
+  const tableBody = document.querySelector('tbody');
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `<td>${itemName}</td><td>${itemPrice}</td>`;
+  tableBody.appendChild(newRow);
 
-        itemColumn.innerText = itemName;
-        priceColumn.innerText = "$" + itemPrice;
+  // Update the grand total
+  total += parseFloat(itemPrice);
+  totalElement.textContent = total;
 
-        row.appendChild(itemColumn);
-        row.appendChild(priceColumn);
-
-        shoppingList.insertBefore(row, grandTotal.parentElement.parentElement);
-
-        const currentTotal = parseFloat(grandTotal.innerText.substring(1));
-        grandTotal.innerText = "$" + (currentTotal + parseFloat(itemPrice)).toFixed(2);
-        totalLabel.innerText = "Grand Total: " + grandTotal.innerText;
-
-        itemInput.value = "";
-        priceInput.value = "";
-      });
+  // Clear the input fields
+  itemNameInput.value = '';
+  itemPriceInput.value = '';
+});
