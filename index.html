@@ -9,31 +9,28 @@
 <script src="./js/list.js"></script>
 </head>
 
+
 <body>
-	<header id="heading">
-		Shopping List Calculator
-	</header>
-	<main onload="render()">
-		<table id="table1">
-			<caption></caption>
-			<tr>
-				<th>Item Name</th>
-				<th>Quantity</th>
-				<th>Price</th>
-				<th>Total</th> 
-			</tr>
-			<tr>
-        <form id="myinputs">
-          <td><input type="text" id="item-name-input" placeholder="Name"></td>
-          <td><input type="text" id="item-qty-input" placeholder="Qty"></td>
-          <td><input type="text" id="item-price-input" placeholder="Price"></td>
-        </form>
-        <td><button id="add" onclick="addData();">Add</button></td>
+    <h3 id="total">Grand Total: $0</h3>
+    <form>
+      <label for="item-name-input">Item Name:</label>
+      <input type="text" id="item-name-input" aria-label="Item Name" aria-required="true" required>
+      <br>
+      <label for="item-price-input">Item Price:</label>
+      <input type="number" id="item-price-input" aria-label="Item Price" aria-required="true" required>
+      <br>
+      <button type="button" id="add" aria-label="Add Item">Add</button>
+    </form>
+    <table id="shopping-list">
+      <tr>
+        <th id="item">Item</th>
+        <th id="price">Price</th>
+      </tr>
+      <tr>
+        <td>Grand Total</td>
+        <td id="grand-total">$0</td>
       </tr>
     </table>
-    <div id="total">Total Ammount is 0 $</div>
-  </main>
-	<footer></footer>
 </body>
 
 </html>
