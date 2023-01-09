@@ -5,32 +5,25 @@
   <title>Shopping List</title>
 </head>
 <body>
-  <header>
-    <h1>Shopping List</h1>
-  </header>
-  <main>
-    <form>
-      <label for="item-name-input">Item Name:</label>
-      <input id="item-name-input" type="text">
-      <label for="item-price-input">Price:</label>
-      <input id="item-price-input" type="number">
-      <button id="add">Add</button>
-    </form>
-    <table>
-      <thead>
-        <tr>
-          <th id="item">Item</th>
-          <th id="price">Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Grand Total</td>
-          <td id="total">0</td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
+  <div>
+  <input type="text" id="item-name-input">
+  <input type="number" id="item-price-input">
+  <button id="add">Add</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th id="item">Item</th>
+      <th id="price">Price</th>
+    </tr>
+  </thead>
+  <tbody id="items">
+    <tr>
+      <td>Grand Total</td>
+      <td id="total">$0.00</td>
+    </tr>
+  </tbody>
+</table>
 	  <script src="script.js"></script>
 </body>
 </html>
